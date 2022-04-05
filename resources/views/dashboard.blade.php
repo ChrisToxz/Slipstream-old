@@ -3,6 +3,11 @@
 @section('content')
             {{-- Dev --}}
                 <div class="absolute bottom-0 right-0 w-10 h-10 2xl:bg-red-500 xl:bg-orange-500 lg:bg-yellow-500 md:bg-green-500 sm:bg-blue-500 "></div>
+                
+                <div class="absolute right-1/2 top-0 bg-orange-500">
+                    <button onclick="Livewire.emit('openModal', 'dev.modal')">Modal</button>
+                    <button onclick="Livewire.emit('openModal', 'general-settings')">Settings</button>
+                </div>
             {{-- Dev --}}
             <div class="flex justify-center w-auto h-screen bg-background-secondary
             transition-all duration-300"> <!-- Sidebar -->
@@ -43,8 +48,7 @@
                             <li class="transition-all cursor-pointer hover:text-brand-primary-500">Dashboard</li>
                             <li class="transition-all cursor-pointer hover:text-brand-primary-500">Settings</li>
                             <li class="transition-all cursor-pointer hover:text-brand-primary-500">Logout</li>
-                            <button onclick="Livewire.emit('openModal', 'dev.modal')">Modal</button>
-                            <button onclick="Livewire.emit('openModal', 'edit-user')">Edit User</button>
+
                         </ul>
                     </nav>
                 </header>
