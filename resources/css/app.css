@@ -8,4 +8,12 @@
   .input-text {
     @apply rounded-md bg-background-surface border-2 border-black border-opacity-10;
   }
+
+  .toggle-checkbox:checked {
+    @apply right-0 border-background-surface bg-status-success-500;
+  }
+  .toggle-checkbox:checked + .toggle-label {
+    @apply bg-background-surface;
+  }
+
 }
