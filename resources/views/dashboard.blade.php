@@ -53,11 +53,10 @@
                     </nav>
                 </header>
 
-
-                    <livewire:media.showcards />
+                <livewire:media.showcards />
 
                 <script>
-{{--                    TODO: Move to main js file --}}
+                    //TODO: Move to main js file
                     function copyToClipboard(text) {
                         var $temp = $("<input>");
                         $("body").append($temp);
