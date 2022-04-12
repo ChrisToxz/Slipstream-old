@@ -7,6 +7,10 @@
 
     <div class="px-4 sm:p-6 text-white"> <!-- Main content -->
 
+        <div class="absolute top-5 right-5">
+            <button wire:click="$emit('closeModal')"><i class="bx bx-x-circle text-3xl"></i></button>
+        </div>
+
         <div class="mb-8">
             <p class="font-light pb-2"><label for="sitename">Sitename</label></p>
             <p><input class="input-text w-3/4" type="text" name="sitename" wire:model="tag.sitename"></p>
@@ -16,18 +20,18 @@
         <div class="flex flex-col items-start mb-8">
             <div class="flex mb-4">
                 <div class="relative inline-block w-10 mr-2 align-middle select-none ">
-                    <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-status-error-500 border-2 border-background-surface appearance-none cursor-pointer"/>
-                    <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-background-surface cursor-pointer"></label>
+                    <input type="checkbox" name="toggle_a" id="toggle_a" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-status-error-500 border-2 border-background-surface appearance-none cursor-pointer"/>
+                    <label for="toggle_a" class="toggle-label block overflow-hidden h-6 rounded-full bg-background-surface cursor-pointer"></label>
                 </div>
-                <label for="toggle" class="font-light pb-2">Keep original file</label>
+                <label for="toggle_a" class="font-light pb-2">Keep original file</label>
             </div>
 
             <div class="flex">
                 <div class="relative inline-block w-10 mr-2 align-middle select-none ">
-                    <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-status-error-500 border-2 border-background-surface appearance-none cursor-pointer"/>
-                    <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-background-surface cursor-pointer"></label>
+                    <input type="checkbox" name="toggle_b" id="toggle_b" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-status-error-500 border-2 border-background-surface appearance-none cursor-pointer"/>
+                    <label for="toggle_b" class="toggle-label block overflow-hidden h-6 rounded-full bg-background-surface cursor-pointer"></label>
                 </div>
-                <label for="toggle" class="font-light pb-2 ">Visitors can see video info</label>
+                <label for="toggle_b" class="font-light pb-2 ">Visitors can see video info</label>
             </div>
         </div>
 
@@ -66,14 +70,10 @@
                 </p>
             </div>
         </div>
-        
+
+        <div class="button">
+            <button type="button" wire:click.prevent="update()">SAVE CHANGES</button>
+        </div>
 
     </div>
-
-    {{-- <div class="px-4 pb-5 sm:px-4 sm:flex">
-        <button wire:click="$emit('closeModal')">Close Modal</button> -
-        <button type="button" wire:click.prevent="update()">Save changes</button> -
-        <button type="button" wire:click.prevent="delete()" value="delete"> Delete</button>
-    </div> --}}
-
 </div>
