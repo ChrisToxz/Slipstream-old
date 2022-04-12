@@ -191,7 +191,10 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // ...
+        'MediaHelper' => \App\Helpers\Media::class,
+        'Toastr' => 'nilsenj\Toastr\Facades\Toastr',
+        'Video' => 'App\Models\Video',
+        'Image' => 'App\Models\Image',
     ])->toArray(),
 
 ];

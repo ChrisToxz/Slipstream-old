@@ -48,20 +48,29 @@
                             <li class="transition-all cursor-pointer hover:text-brand-primary-500" 
                             onclick="Livewire.emit('openModal', 'general-settings')">Settings</li>
                             <li class="transition-all cursor-pointer hover:text-brand-primary-500">Logout</li>
-
+                            <li class="transition-all cursor-pointer hover:text-brand-primary-500" onclick="Livewire.emit('openModal', 'media.upload')">Upload</li>
                         </ul>
                     </nav>
                 </header>
 
-                <div class="grid gap-8 self-center mx-20 mt-8 lg:grid-cols-3 md:grid-cols-2"><!-- Videocards -->
-                    <x-videocard message="media/stock1.jpg" />
-                    <x-videocard message="media/stock2.jpg" />
-                    <x-videocard message="media/stock3.jpg" />
-                    <x-videocard message="media/stock4.jpg" />
-                    <x-videocard message="media/stock5.jpg" />
-                    <x-videocard message="media/stock6.jpg" />
-                </div>
 
+                    <livewire:media.showcards />
+
+                <script>
+{{--                    TODO: Move to main js file --}}
+                    function copyToClipboard(text) {
+                        var $temp = $("<input>");
+                        $("body").append($temp);
+                        $temp.val(text).select();
+                        document.execCommand("copy");
+                        $temp.remove();
+
+                        $("#tooltip-copy").text("Copied!");
+                        window.setTimeout(function() {
+                            $("#tooltip-copy").text("Copy");
+                        }, 2000);
+                    }
+                </script>
                 {{-- <div class="mx-20 mt-10"><!-- playlists -->
                     <div class="text-xl font-medium mb-2 text-white">Playlists</div>
                     <div class="grid grid-cols-6 gap-4">
