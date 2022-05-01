@@ -977,6 +977,15 @@ input[type=file]::file-selector-button:hover{
 .w-6{
   width: 1.5rem;
 }
+.w-1\/2{
+  width: 50%;
+}
+.w-2\/4{
+  width: 50%;
+}
+.w-1\/3{
+  width: 33.333333%;
+}
 .min-w-\[3rem\]{
   min-width: 3rem;
 }
@@ -1199,6 +1208,12 @@ input[type=file]::file-selector-button:hover{
 }
 .pb-10{
   padding-bottom: 2.5rem;
+}
+.pl-5{
+  padding-left: 1.25rem;
+}
+.pl-2{
+  padding-left: 0.5rem;
 }
 .text-left{
   text-align: left;
