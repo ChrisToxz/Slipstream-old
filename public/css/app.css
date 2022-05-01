@@ -953,6 +953,12 @@ input[type=file]::file-selector-button:hover{
 .h-72{
   height: 18rem;
 }
+.h-1\/4{
+  height: 25%;
+}
+.h-3\/4{
+  height: 75%;
+}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -1108,6 +1114,9 @@ input[type=file]::file-selector-button:hover{
 .border-8{
   border-width: 8px;
 }
+.border-4{
+  border-width: 4px;
+}
 .border-t{
   border-top-width: 1px;
 }
@@ -1154,8 +1163,18 @@ input[type=file]::file-selector-button:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(191 47 47 / var(--tw-bg-opacity));
 }
+.bg-green-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(49 196 141 / var(--tw-bg-opacity));
+}
 .bg-opacity-10{
   --tw-bg-opacity: 0.1;
+}
+.bg-opacity-70{
+  --tw-bg-opacity: 0.7;
+}
+.bg-opacity-20{
+  --tw-bg-opacity: 0.2;
 }
 .p-6{
   padding: 1.5rem;
@@ -1311,6 +1330,9 @@ input[type=file]::file-selector-button:hover{
 .text-opacity-100{
   --tw-text-opacity: 1;
 }
+.text-opacity-70{
+  --tw-text-opacity: 0.7;
+}
 .underline{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -1351,8 +1373,16 @@ input[type=file]::file-selector-button:hover{
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.outline-2{
+  outline-width: 2px;
+}
 .backdrop-blur-sm{
   --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.backdrop-opacity-25{
+  --tw-backdrop-opacity: opacity(0.25);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
