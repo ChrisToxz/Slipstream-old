@@ -70,11 +70,9 @@ module.exports = {
                     "error-600": "#aa2020",
                     "error-700": "#8f1818",
                 },
-
+    
             },
         },
     },
-    plugins: [
-        require('flowbite/plugin')
-    ]
+    plugins: [],
 };
