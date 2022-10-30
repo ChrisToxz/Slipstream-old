@@ -7,7 +7,7 @@
             <div class="bg-black opacity-80 flex justify-between rounded-b-lg text-opacity-100 text-white px-4 py-2"><!-- Video Information -->
                 <div>
                     <p class="text-lg">
-                        <a href="{{url('/v/'.$tag->tag)}}" target="_blank"><b>{{ $tag->title }}</b></a>
+                     <a href="{{url('/v/'.$tag->tag)}}" target="_blank"><b>{{ $tag->title }}</b></a>
                     </p>
                     <p class="text-sm text-de">
                         {{ $tag->description }}
