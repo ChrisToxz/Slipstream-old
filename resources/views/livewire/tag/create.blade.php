@@ -10,8 +10,9 @@
             <!-- Input -->
             <div x-show="!file">
                 <div class="my-20 flex justify-center items-center flex-col cursor-pointer">
-                    <span class="flex justify-center mb-4"><box-icon name='download' color="white" animation="flashing-hover" size="lg"></box-icon></span>
-                    <input id="file" hidden type="file" wire:model="file" x-ref="file" x-on:change="file = $refs.file.files[0].name">
+                    <span class="flex justify-center mb-4" ><box-icon name='download' color="white" animation="flashing-hover" size="lg"></box-icon></span>
+                    <input         class="opacity-0"
+                                          x-on:dragover="$el.classList.add('active')" x-on:dragleave="$el.classList.remove('active')" x-on:drop="$el.classList.remove('active')" id="file"  type="file" wire:model="file" x-ref="file" x-on:change="file = $refs.file.files[0].name">
                     <div class="flex justify-center"><p id="dropmessage"><span class="font-bold">Choose a file</span> or drag it here.</p></div>
                 </div>
             </div>
@@ -49,7 +50,7 @@
                         <div class="grid grid-cols-2 gap-8">
                             <div class="">
                                 <p class="mb-2"><label for="title" >Title</label></p>
-                                <p class="mb-4"><input type="text" x-bind:placeholder="file" wire:model="title" id="title" class="default-input w-full hidden"></p>
+                                <p class="mb-4"><input type="text" x-bind:placeholder="file" wire:model="title" id="title" class="default-input w-full"></p>
                                 <p class="mb-2"><label for="description">Description</label></p>
                                 <p><textarea placeholder="Description..." rows="1" wire:model="description" class="default-input w-full"></textarea></p>
                                 <p class="mb-2"><label for="type">Type</label>
