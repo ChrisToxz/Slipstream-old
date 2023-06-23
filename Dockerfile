@@ -1,4 +1,4 @@
-FROM serversideup/php:8.0-fpm-nginx
+FROM serversideup/php:8.1-fpm-nginx
 
 # Set environment variables
 ENV SSL_MODE="off"
